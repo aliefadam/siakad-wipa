@@ -26,7 +26,12 @@ class AuthController extends Controller
         ]);
 
         if (Auth::attempt($request->only("username", "password"))) {
-            return "SUKSES";
+            $userRole = Auth::user()->role;
+            if ($userRole == "student") {
+                return redirect()->route("student.dashboard");
+            } else if ($userRole == "teacher") {
+            } else {
+            }
         } else {
             return back()->with("notification", [
                 "title" => "Login Gagal",
