@@ -8,7 +8,7 @@ function StudentLayout({ title, children }) {
         <div className="mt-14">
             <Head title={title} />
             <Navbar />
-            <div className="py-10 px-7">{children}</div>
+            <div className="py-12 px-7">{children}</div>
             <Footer />
         </div>
     );

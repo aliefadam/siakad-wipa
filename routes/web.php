@@ -19,4 +19,6 @@ Route::middleware("auth")->group(function () {
     Route::prefix("student")->name("student.")->group(function () {
         Route::get("/dashboard", [StudentController::class, "dashboard"])->name("dashboard");
     });
+
+    Route::get("/logout", [AuthController::class, "logout"])->name("logout");
 });

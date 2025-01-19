@@ -16,7 +16,7 @@ function Dashboard({ title }) {
 
     return (
         <StudentLayout title={title}>
-            <div className="grid grid-cols-12 gap-7">
+            <div className="grid grid-cols-12 gap-9">
                 <div className="col-span-8 h-fit">
                     <div className="grid grid-cols-3 gap-5">
                         <div className="bg-[#4DA1A9] text-white shadow-md rounded-md p-5 flex justify-between items-center">
@@ -50,75 +50,82 @@ function Dashboard({ title }) {
                         </div>
                     </div>
                     <div className="mt-8">
-                        <h1 className="border-b border-primary poppins-semibold text-xl text-primary text-center py-4">
+                        <h1 className="border-b border-primary poppins-semibold text-2xl text-primary text-center py-4">
                             Daftar Mata Pelajaran
                         </h1>
                     </div>
-                    <div className="grid grid-cols-3 gap-5 mt-6">
+                    <div className="grid grid-cols-3 gap-7 mt-6">
                         <CourseItem
                             href={""}
                             name={"Bahasa Indonesia"}
                             teacher={"Ibu Sulistyowati S.Pd"}
+                            srcImg={"/imgs/logo-b-indo.jpg"}
                         />
                         <CourseItem
                             href={""}
                             name={"Matematika"}
                             teacher={"Ibu Sulistyowati S.Pd"}
+                            srcImg={"/imgs/logo-matematika.jpg"}
                         />
                         <CourseItem
                             href={""}
                             name={"Bahasa Inggris"}
                             teacher={"Ibu Sulistyowati S.Pd"}
+                            srcImg={"/imgs/logo-b-inggris.jpg"}
                         />
                         <CourseItem
                             href={""}
-                            name={"Bahasa Inggris"}
+                            name={"Bahasa Jawa"}
                             teacher={"Ibu Sulistyowati S.Pd"}
+                            srcImg={"/imgs/logo-b-jawa.jpg"}
                         />
                         <CourseItem
                             href={""}
-                            name={"Bahasa Inggris"}
+                            name={"Fisika"}
                             teacher={"Ibu Sulistyowati S.Pd"}
+                            srcImg={"/imgs/logo-fisika.jpg"}
                         />
-                        <CourseItem
+                        {/* <CourseItem
                             href={""}
-                            name={"Bahasa Inggris"}
+                            name={"Biologi"}
                             teacher={"Ibu Sulistyowati S.Pd"}
-                        />
+                        /> */}
                     </div>
                 </div>
-                <div className="col-span-4 rounded-md shadow-md border border-primary h-fit">
-                    <h1 className="poppins-semibold text-white bg-secondary p-5 text-[16px] text-center">
-                        {live} WIB
-                    </h1>
-                    <div className="flex flex-col">
-                        <div className="flex justify-between items-center text-sm text-green-600 poppins-semibold border-b border-primary p-5">
-                            <span>Masuk</span>
-                            <span>07.00 WIB</span>
-                        </div>
-                        <div className="flex justify-between items-center text-sm text-primary poppins-medium border-b border-primary p-5">
-                            <span>Matematika</span>
-                            <span>07.00 - 10.00 WIB</span>
-                        </div>
-                        <div className="flex justify-between items-center text-sm text-gray-700 poppins-semibold border-b border-primary p-5">
-                            <span>Istirahat 1</span>
-                            <span>10.00 - 10.30 WIB</span>
-                        </div>
-                        <div className="flex justify-between items-center text-sm text-primary poppins-medium border-b border-primary p-5">
-                            <span>Bahasa Indonesia</span>
-                            <span>10.30 - 12.00 WIB</span>
-                        </div>
-                        <div className="flex justify-between items-center text-sm text-gray-700 poppins-semibold border-b border-primary p-5">
-                            <span>Istirahat 2</span>
-                            <span>12.00 - 13.00 WIB</span>
-                        </div>
-                        <div className="flex justify-between items-center text-sm text-primary poppins-medium border-b border-primary p-5">
-                            <span>Bahasa Inggris</span>
-                            <span>13.00 - 15.00 WIB</span>
-                        </div>
-                        <div className="flex justify-between items-center text-sm text-red-600 poppins-semibold  p-5">
-                            <span>Pulang</span>
-                            <span>15.00 WIB</span>
+                <div className="col-span-4 h-fit">
+                    <div className="rounded-md shadow-md border border-primary overflow-hidden">
+                        <h1 className="poppins-semibold text-white bg-secondary p-5 text-[16px] text-center">
+                            {live} WIB
+                        </h1>
+                        <div className="flex flex-col">
+                            <div className="flex justify-between items-center text-sm bg-white text-green-600 poppins-semibold border-b border-primary p-5">
+                                <span>Masuk</span>
+                                <span>07.00 WIB</span>
+                            </div>
+                            <div className="flex justify-between items-center text-sm bg-white text-primary poppins-medium border-b border-primary p-5">
+                                <span>Matematika</span>
+                                <span>07.00 - 10.00 WIB</span>
+                            </div>
+                            <div className="flex justify-between items-center text-sm bg-white text-gray-700 poppins-semibold border-b border-primary p-5">
+                                <span>Istirahat 1</span>
+                                <span>10.00 - 10.30 WIB</span>
+                            </div>
+                            <div className="flex justify-between items-center text-sm bg-white text-primary poppins-medium border-b border-primary p-5">
+                                <span>Bahasa Indonesia</span>
+                                <span>10.30 - 12.00 WIB</span>
+                            </div>
+                            <div className="flex justify-between items-center text-sm bg-white text-gray-700 poppins-semibold border-b border-primary p-5">
+                                <span>Istirahat 2</span>
+                                <span>12.00 - 13.00 WIB</span>
+                            </div>
+                            <div className="flex justify-between items-center text-sm bg-white text-primary poppins-medium border-b border-primary p-5">
+                                <span>Bahasa Inggris</span>
+                                <span>13.00 - 15.00 WIB</span>
+                            </div>
+                            <div className="flex justify-between items-center text-sm bg-white text-red-600 poppins-semibold  p-5">
+                                <span>Pulang</span>
+                                <span>15.00 WIB</span>
+                            </div>
                         </div>
                     </div>
                 </div>
